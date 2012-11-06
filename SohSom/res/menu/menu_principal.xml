@@ -1,0 +1,20 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:showAsAction="always"
+        android:title="Opções">
+        <menu>
+            <group android:checkableBehavior="none" >
+                <item
+                    android:id="@+id/musicas"
+                    android:showAsAction="always"
+                    android:title="Músicas"/>
+                <item
+                    android:id="@+id/artistas"
+                    android:showAsAction="always"
+                    android:title="Artistas"/>
+            </group>
+        </menu>
+    </item>
+
+</menu>
