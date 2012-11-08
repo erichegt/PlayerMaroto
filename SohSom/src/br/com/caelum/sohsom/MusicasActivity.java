@@ -8,6 +8,7 @@ import android.widget.ListView;
 import android.widget.Toast;
 import br.com.caelum.sohsom.adapter.MusicaAdapter;
 import br.com.caelum.sohsom.database.Repositorio;
+import br.com.caelum.sohsom.listeners.IrParaPlayer;
 import br.com.caelum.sohsom.modelo.Musica;
 
 import com.actionbarsherlock.app.ActionBar;
@@ -15,6 +16,7 @@ import com.actionbarsherlock.app.ActionBar.Tab;
 import com.actionbarsherlock.app.ActionBar.TabListener;
 import com.actionbarsherlock.app.SherlockActivity;
 import com.actionbarsherlock.view.Menu;
+import com.actionbarsherlock.view.MenuItem;
 
 public class MusicasActivity extends SherlockActivity implements TabListener{
 	private ActionBar actionBar;
@@ -28,6 +30,8 @@ public class MusicasActivity extends SherlockActivity implements TabListener{
         
         List<Musica> musicas = new Repositorio().listaTodasMusicas();
         MusicaAdapter adapter = new MusicaAdapter(musicas, this);
+        
+        listagemMusicas.setOnItemClickListener(new IrParaPlayer(this));
         
         listagemMusicas.setAdapter(adapter);
         
@@ -53,6 +57,20 @@ public class MusicasActivity extends SherlockActivity implements TabListener{
 		getSupportMenuInflater().inflate(R.menu.menu_principal, menu);
 		
 		return super.onCreateOptionsMenu(menu);
+	}
+	
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		switch (item.getItemId()) {
+		case R.id.menu_shuffle:
+			new IrParaPlayer(this).fazerTransicaoParaPlayer();
+			break;
+
+		default:
+			break;
+		}
+		
+		return super.onOptionsItemSelected(item);
 	}
 
 

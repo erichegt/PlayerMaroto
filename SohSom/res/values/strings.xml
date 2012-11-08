@@ -1,8 +1,7 @@
 <resources>
 
     <string name="app_name">SohSom</string>
-    <string name="hello_world">Hello world!</string>
-    <string name="menu_settings">Settings</string>
-    <string name="title_activity_musicas">MusicasActivity</string>
+    <string name="hamlet">O all you host of heaven! O earth! what else?\nAnd shall I couple hell? O, fie! Hold, hold, my heart;\nAnd you, my sinews, grow not instant old,\nBut bear me stiffly up. Remember thee!\nAy, thou poor ghost, while memory holds a seat\nIn this distracted globe. Remember thee!\nYea, from the table of my memory\nI&amp;apos;ll wipe away all trivial fond records,\nAll saws of books, all forms, all pressures past,\nThat youth and observation copied there;\nAnd thy commandment all alone shall live\nWithin the book and volume of my brain,\nUnmix&amp;apos;d with baser matter: yes, by heaven!\nO most pernicious woman!\nO villain, villain, smiling, damned villain!\nMy tables,--meet it is I set it down,\nThat one may smile, and smile, and be a villain;\nAt least I&amp;apos;m sure it may be so in Denmark:</string>
+    
 
 </resources>

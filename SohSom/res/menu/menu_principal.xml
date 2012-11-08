@@ -1,22 +1,27 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android" >
 
     <item
+        android:id="@+id/menu_shuffle"
         android:showAsAction="always"
-        android:title="Play"/>
+        android:title="Shuffle"/>
 
     <item
         android:showAsAction="always"
-        android:title="Opções">
+        android:title="Visualizar">
         <menu>
             <group android:checkableBehavior="none" >
                 <item
-                    android:id="@+id/musicas"
+                    android:id="@+id/menu_musicas"
                     android:showAsAction="always"
                     android:title="Músicas"/>
                 <item
-                    android:id="@+id/artistas"
+                    android:id="@+id/menu_artistas"
                     android:showAsAction="always"
                     android:title="Artistas"/>
+                <item
+                    android:id="@+id/menu_galeria"
+                    android:showAsAction="always"
+                    android:title="Galeria"/>
             </group>
         </menu>
     </item>
