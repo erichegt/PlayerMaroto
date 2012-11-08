@@ -2,6 +2,10 @@
 
     <item
         android:showAsAction="always"
+        android:title="Play"/>
+
+    <item
+        android:showAsAction="always"
         android:title="Opções">
         <menu>
             <group android:checkableBehavior="none" >
