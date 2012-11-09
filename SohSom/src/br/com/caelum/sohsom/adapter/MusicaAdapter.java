@@ -19,7 +19,7 @@ public class MusicaAdapter extends AdapterGenerico<Musica> {
 	
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
-		View linhaDaListagem = activity.getLayoutInflater().inflate(R.layout.item_lista, null);
+		View linhaDaListagem = activity.getLayoutInflater().inflate(R.layout.musicas_item, null);
 		
 		TextView nomeDoArtista = (TextView) linhaDaListagem.findViewById(R.id.artista);
 		TextView duracao = (TextView) linhaDaListagem.findViewById(R.id.duracao);

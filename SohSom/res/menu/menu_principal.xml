@@ -15,9 +15,9 @@
                     android:showAsAction="always"
                     android:title="Músicas"/>
                 <item
-                    android:id="@+id/menu_artistas"
+                    android:id="@+id/menu_albuns"
                     android:showAsAction="always"
-                    android:title="Artistas"/>
+                    android:title="Álbuns"/>
                 <item
                     android:id="@+id/menu_galeria"
                     android:showAsAction="always"

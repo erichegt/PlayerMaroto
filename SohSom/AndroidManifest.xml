@@ -33,6 +33,11 @@
             android:name=".VitrolaActivity"
             android:label="SohSom"
             />
+        
+        <activity
+            android:name=".AlbunsActivity"
+            android:label="SohSom"
+            />
     </application>
 
 </manifest>

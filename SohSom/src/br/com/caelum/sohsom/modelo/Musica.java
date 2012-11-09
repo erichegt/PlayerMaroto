@@ -3,7 +3,7 @@ package br.com.caelum.sohsom.modelo;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
-public class Musica {
+public class Musica implements Comparable<Musica>{
 	
 	private Integer numeroFaixa;
 	private String nome;
@@ -18,6 +18,12 @@ public class Musica {
 		this.duracao = duracao;
 		this.album = album;
 	}
+	
+	@Override
+	public int compareTo(Musica another) {
+		return this.getNome().compareTo(another.getNome());
+	}
+	
 	public String getNome() {
 		return nome;
 	}

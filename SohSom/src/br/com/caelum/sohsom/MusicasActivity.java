@@ -2,6 +2,7 @@ package br.com.caelum.sohsom;
 
 import java.util.List;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
 import android.widget.ListView;
@@ -66,8 +67,13 @@ public class MusicasActivity extends SherlockActivity implements TabListener{
 		case R.id.menu_shuffle:
 			new IrParaVitrola(this).fazerTransicao();
 			break;
-
-		default:
+			
+		case R.id.menu_albuns:
+			startActivity(new Intent(this, AlbunsActivity.class));
+			break;
+			
+		case R.id.menu_musicas:
+			startActivity(new Intent(this, MusicasActivity.class));
 			break;
 		}
 		

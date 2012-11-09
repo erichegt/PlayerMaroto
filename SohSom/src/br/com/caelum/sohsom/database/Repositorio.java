@@ -1,6 +1,7 @@
 package br.com.caelum.sohsom.database;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.GregorianCalendar;
 import java.util.List;
 
@@ -53,7 +54,20 @@ public class Repositorio {
 			}
 		}
 		
+		Collections.sort(musicas);
+		
 		return musicas;
 	}
+	
+	public List<Album> listaTodosAlbuns() {
+		List<Album> albuns = new ArrayList<Album>();
+		
+		for (Artista a : artistas) {
+			albuns.addAll(a.getDiscos());
+		}
+		
+		return albuns;
+	}
+	
 	
 }
