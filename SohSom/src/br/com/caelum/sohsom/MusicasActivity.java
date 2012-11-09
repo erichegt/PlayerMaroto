@@ -9,6 +9,7 @@ import android.widget.Toast;
 import br.com.caelum.sohsom.adapter.MusicaAdapter;
 import br.com.caelum.sohsom.database.Repositorio;
 import br.com.caelum.sohsom.listeners.IrParaPlayer;
+import br.com.caelum.sohsom.listeners.IrParaVitrola;
 import br.com.caelum.sohsom.modelo.Musica;
 
 import com.actionbarsherlock.app.ActionBar;
@@ -63,7 +64,7 @@ public class MusicasActivity extends SherlockActivity implements TabListener{
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
 		case R.id.menu_shuffle:
-			new IrParaPlayer(this).fazerTransicaoParaPlayer();
+			new IrParaVitrola(this).fazerTransicao();
 			break;
 
 		default:
