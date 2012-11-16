@@ -5,18 +5,22 @@
     android:orientation="vertical"
     android:paddingLeft="40dp"
     android:gravity="center_vertical"
+    android:background="@drawable/gradiente_vertical_vermelho"
      >
 
     <TextView
         android:id="@+id/artista"
         android:gravity="center"
+        android:textColor="@android:color/white"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginRight="10dp" />
 
     <TextView
         android:id="@+id/album"
+        android:textColor="@android:color/white"
         android:gravity="center"
+        android:textSize="25sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 

@@ -37,27 +37,7 @@ public class AlbunsActivity extends SherlockActivity implements TabListener{
 	        listagemAlbuns.setAdapter(adapter);
 	        listagemAlbuns.setOnChildClickListener(new IrParaPlayer(this));
 	        
-	        montaAbas();
 	    }
-
-
-		private void montaAbas() {
-			actionBar = getSupportActionBar();
-	        
-	        Tab todas = actionBar.newTab();
-	        todas.setTabListener(this);
-	        todas.setText("Todas");
-	        
-	        Tab favoritos = actionBar.newTab();
-	        favoritos.setTabListener(this);
-	        favoritos.setText("Favoritas");
-	        
-	        actionBar.addTab(favoritos);
-	        actionBar.addTab(todas, true);
-	        
-	        actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
-		}
-
 		
 		@Override
 		public boolean onCreateOptionsMenu(Menu menu) {
