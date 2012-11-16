@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-<!--     <style name="SohSomTheme" parent="Theme.Sherlock.ForceOverflow" /> -->
-    <style name="SohSomTheme" parent="Theme.Sherlock" />
+
+    <!-- <style name="SohSomTheme" parent="Theme.Sherlock"> -->
+    <style name="SohSomTheme" parent="Theme.Sherlock.ForceOverflow">
+        <item name="actionBarStyle">@style/Widget.MyTheme.ActionBar</item>
+        <item name="android:actionBarStyle">@style/Widget.MyTheme.ActionBar</item>
+    </style>
+
+    <style name="Widget.MyTheme.ActionBar" parent="Widget.Sherlock.ActionBar">
+        <item name="android:background">@drawable/gradiente_menu</item>
+        <item name="background">@drawable/gradiente_menu</item>
+    </style>
+
 </resources>
