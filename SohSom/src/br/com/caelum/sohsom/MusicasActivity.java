@@ -2,15 +2,13 @@ package br.com.caelum.sohsom;
 
 import java.util.List;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
 import android.widget.ListView;
-import android.widget.Toast;
 import br.com.caelum.sohsom.adapter.MusicaAdapter;
 import br.com.caelum.sohsom.database.Repositorio;
 import br.com.caelum.sohsom.listeners.IrParaPlayer;
-import br.com.caelum.sohsom.listeners.IrParaVitrola;
+import br.com.caelum.sohsom.menu.MenuPrincipal;
 import br.com.caelum.sohsom.modelo.Musica;
 
 import com.actionbarsherlock.app.ActionBar;
@@ -22,6 +20,7 @@ import com.actionbarsherlock.view.MenuItem;
 
 public class MusicasActivity extends SherlockActivity implements TabListener{
 	private ActionBar actionBar;
+	private MenuPrincipal menuPrincipal;
 
 	@Override
     public void onCreate(Bundle savedInstanceState) {
@@ -51,39 +50,27 @@ public class MusicasActivity extends SherlockActivity implements TabListener{
         actionBar.addTab(todas, true);
         
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
+        
+        menuPrincipal = new MenuPrincipal(this);
     }
 
 	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		getSupportMenuInflater().inflate(R.menu.menu_principal, menu);
+		menuPrincipal.onCreateOptionsMenu(menu);
 		
 		return super.onCreateOptionsMenu(menu);
 	}
+
 	
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
-		switch (item.getItemId()) {
-		case R.id.menu_shuffle:
-			new IrParaVitrola(this).fazerTransicao();
-			break;
-			
-		case R.id.menu_albuns:
-			startActivity(new Intent(this, AlbunsActivity.class));
-			break;
-			
-		case R.id.menu_musicas:
-			startActivity(new Intent(this, MusicasActivity.class));
-			break;
-		}
-		
-		return super.onOptionsItemSelected(item);
+		return menuPrincipal.onOptionsItemSelected(item);
 	}
-
 
 	@Override
 	public void onTabSelected(Tab tab, FragmentTransaction ft) {
-		Toast.makeText(this, "Aba clicada!", Toast.LENGTH_LONG).show();
+		
 	}
 
 	@Override
